@@ -46,7 +46,7 @@ BEGIN
     return ("the two vectors must be equal")
 
     FOR i FROM 0 TO i < length.v1 DO
-    ps = ps + (V*W)
+    ps == ps + (V*W)
     END_FOR
     return (ps)
 END
