@@ -1,6 +1,72 @@
-ALGORITHM Problem 2
+PROCEDURE dot_product(V,W)
 VAR
-    set_declarations
+    ps : INTEGER :=0;
 BEGIN
-    set_instructions
+    IF (V=W) THEN
+   
+        FOR i FROM 0 TO i < length.v1  DO
+            ps == ps + (v1*v2)
+        END_FOR
+   
+    END_IF
+    
 END
+
+ALGORITHM orthogonality
+VAR
+    v1,v2 : ARRAY_OF INTEGER;
+    i,ps : INTEGER;
+BEGIN
+    read (v1[i], v2[i])
+
+        call dot_product(v1[i],v2[i])
+
+        IF (ps == 0) THEN
+            write ("the two vectors are orthogonal")
+        ELSE
+            write ("the two vectors are not orthogonal")
+        END_IF
+        
+    END_FOR
+END
+
+
+
+
+
+
+// ***** USE OF FUNCTION ******
+
+FUNCTION dot_product(V,W)
+VAR
+    ps : INTEGER := 0;
+
+BEGIN
+    if length.V <> length.W
+    return ("the two vectors must be equal")
+
+    FOR i FROM 0 TO i < length.v1 DO
+    ps = ps + (V*W)
+    END_FOR
+    return (ps)
+END
+
+ALGORITHM orthogonality
+VAR
+    v1 : ARRAY_OF INTEGER;
+    v2 : ARRAY_OF INTEGER;
+    i : INTEGER;
+    result: INTEGER;
+BEGIN
+    read (v1[i],v2[i])
+    result = dot_product(v1[i],v2[i])
+
+    IF (result == 0) THEN
+        write ("the two vectors are orthogonal")
+    ELSE
+        write ("the two vectors are not orthognal")
+    END_IF
+END
+
+
+
