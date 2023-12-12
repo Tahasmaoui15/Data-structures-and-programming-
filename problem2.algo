@@ -1,13 +1,22 @@
+//***** USE OF PROCEDURE
 PROCEDURE dot_product(V,W)
 VAR
     ps : INTEGER :=0;
 BEGIN
-    IF (V=W) THEN
-   
-        FOR i FROM 0 TO i < length.v1  DO
-            ps = ps + (v1*v2)
+    IF (length.V == length.W) THEN
+    
+        FOR i FROM 0 TO i < length.V  DO
+            ps = ps + (V[i]*W[i])
         END_FOR
-   
+
+        IF (ps == 0) THEN
+            write ("the two vectors are orthogonal")
+        ELSE
+            write ("the two vectors are not orthogonal")
+        END_IF
+    
+    ELSE write ("the two vectors must have equal length")
+    
     END_IF
     
 END
@@ -16,23 +25,14 @@ ALGORITHM orthogonality
 VAR
     v1,v2 : ARRAY_OF INTEGER;
     i,ps : INTEGER;
+
 BEGIN
+    
     read (v1[i], v2[i])
 
-        call dot_product(v1[i],v2[i])
+    call dot_product(v1,v2)
 
-        IF (ps == 0) THEN
-            write ("the two vectors are orthogonal")
-        ELSE
-            write ("the two vectors are not orthogonal")
-        END_IF
-        
-    END_FOR
 END
-
-
-
-
 
 
 // ***** USE OF FUNCTION ******
@@ -42,11 +42,13 @@ VAR
     ps : INTEGER := 0;
 
 BEGIN
-    if length.V <> length.W
-    return ("the two vectors must be equal")
+    IF length.V <> length.W
+        write ("the two vectors must be equal")
+        return ("error")
+    END_IF    
 
     FOR i FROM 0 TO i < length.v1 DO
-    ps = ps + (V*W)
+        ps = ps + (V[i]*W[i])
     END_FOR
     return (ps)
 END
@@ -59,7 +61,7 @@ VAR
     result: INTEGER;
 BEGIN
     read (v1[i],v2[i])
-    result = dot_product(v1[i],v2[i])
+    result = dot_product(v1,v2)
 
     IF (result == 0) THEN
         write ("the two vectors are orthogonal")
