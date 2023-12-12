@@ -28,7 +28,7 @@ VAR
 
 BEGIN
     
-    read (v1[i], v2[i])
+    read (v1,v2)
 
     call dot_product(v1,v2)
 
@@ -60,7 +60,7 @@ VAR
     i : INTEGER;
     result: INTEGER;
 BEGIN
-    read (v1[i],v2[i])
+    read (v1,v2)
     result = dot_product(v1,v2)
 
     IF (result == 0) THEN
